@@ -9,7 +9,6 @@ app.use(cors({
     credentials: true
 }))
 
-
 app.use(express.json({
     limit: "16kb"
 }))
@@ -42,5 +41,6 @@ app.use("/api/v1/video", videoRouter);
 app.use("/api/v1/healthcheck", healthcheckRouter);
 app.use("/api/v1/playlist", playlistRouter);
 app.use("/api/v1/dashboard", dashboardRouter);
+// console.log("CORS Origin from env:", process.env.CORS_ORIGIN);
 
 export { app }

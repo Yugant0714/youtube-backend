@@ -13,7 +13,7 @@ import multer from "multer"
 //   const upload = multer({ storage: storage })
 
 const storage = multer.diskStorage({
-    destination: function(rer, file, cb){
+    destination: function(req, file, cb){
         cb(null, "./public/temp")
     },
     filename: function(req, file, cb){
